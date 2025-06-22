@@ -3,6 +3,7 @@ import java.util.Comparator;
 
 public class ProductSearch {
 
+    // Linear Search by product name
     public static Product linearSearch(Product[] products, String name) {
         for (Product p : products) {
             if (p.productName.equalsIgnoreCase(name)) {
@@ -12,6 +13,7 @@ public class ProductSearch {
         return null;
     }
 
+    // Binary Search by product name (assumes array is sorted)
     public static Product binarySearch(Product[] products, String name) {
         int left = 0, right = products.length - 1;
         while (left <= right) {
